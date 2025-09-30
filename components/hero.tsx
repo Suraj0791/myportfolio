@@ -31,8 +31,8 @@ export function Hero() {
         <div className="relative mb-8 animate-in fade-in slide-in-from-bottom-4 duration-1000">
           <div className="h-32 w-32 rounded-full border-4 border-primary overflow-hidden">
             <Image
-              src="/placeholder.svg?height=128&width=128"
-              alt="Profile"
+              src="/developer-avatar.jpg"
+              alt="Suraj Sharma - Full Stack Developer"
               width={128}
               height={128}
               className="h-full w-full object-cover"
