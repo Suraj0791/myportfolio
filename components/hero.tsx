@@ -1,28 +1,27 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import { Github, Linkedin, Mail, Twitter } from "lucide-react";
 import Image from "next/image";
 import { TechBadge } from "./tech-badge";
 
 const techStack = [
-  "React js",
-  "Next js",
-  "Express js",
-  "Node Js",
+  "React",
+  "Next.js",
+  "Express.js",
+  "Node.js",
   "Bun",
-  "Tailwind Css",
-  "Three Js",
+  "Tailwind CSS",
+  "Three.js",
   "Vercel",
-  "Aws",
-  "Javascript",
-  "Typescript",
+  "AWS",
+  "JavaScript",
+  "TypeScript",
   "Vector DB",
   "MongoDB",
   "Prisma",
   "Drizzle",
-  "Postgres",
+  "PostgreSQL",
 ];
 
 export function Hero() {
@@ -32,7 +31,7 @@ export function Hero() {
         <div className="relative mb-8 animate-in fade-in slide-in-from-bottom-4 duration-1000">
           <div className="h-32 w-32 rounded-full border-4 border-primary overflow-hidden">
             <Image
-              src="/developer-avatar.png"
+              src="/placeholder.svg?height=128&width=128"
               alt="Profile"
               width={128}
               height={128}
@@ -63,9 +62,11 @@ export function Hero() {
         </div>
 
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3 animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-300">
-          <Button size="lg" className="rounded-full">
-            <Mail className="mr-2 h-4 w-4" />
-            Get in touch
+          <Button size="lg" className="rounded-full" asChild>
+            <a href="mailto:surajstudent9122@gmail.com">
+              <Mail className="mr-2 h-4 w-4" />
+              Get in touch
+            </a>
           </Button>
           <Button
             size="lg"
@@ -77,23 +78,43 @@ export function Hero() {
         </div>
 
         <div className="mt-8 flex items-center gap-4 animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-450">
-          <Button variant="ghost" size="icon" className="rounded-full">
-            <Github className="h-5 w-5" />
+          <Button variant="ghost" size="icon" className="rounded-full" asChild>
+            <a
+              href="https://github.com/Suraj0791/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Github className="h-5 w-5" />
+            </a>
           </Button>
-          <Button variant="ghost" size="icon" className="rounded-full">
-            <Twitter className="h-5 w-5" />
+          <Button variant="ghost" size="icon" className="rounded-full" asChild>
+            <a
+              href="https://x.com/surajsharm13774?s=21"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Twitter className="h-5 w-5" />
+            </a>
           </Button>
-          <Button variant="ghost" size="icon" className="rounded-full">
-            <Linkedin className="h-5 w-5" />
+          <Button variant="ghost" size="icon" className="rounded-full" asChild>
+            <a
+              href="https://www.linkedin.com/in/suraj-sharma4011"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Linkedin className="h-5 w-5" />
+            </a>
           </Button>
-          <Button variant="ghost" size="icon" className="rounded-full">
-            <Mail className="h-5 w-5" />
+          <Button variant="ghost" size="icon" className="rounded-full" asChild>
+            <a href="mailto:surajstudent9122@gmail.com">
+              <Mail className="h-5 w-5" />
+            </a>
           </Button>
         </div>
 
         <div className="mt-16 flex flex-wrap items-center justify-center gap-2 animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-600">
           {techStack.map((tech) => (
-            <TechBadge key={tech} name={tech} variant="icon-only" />
+            <TechBadge key={tech} name={tech} />
           ))}
         </div>
       </div>

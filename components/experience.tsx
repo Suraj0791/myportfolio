@@ -3,7 +3,6 @@
 import { Card } from "@/components/ui/card";
 import { ExternalLink } from "lucide-react";
 import { TechBadge } from "./tech-badge";
-import Image from "next/image";
 
 const experiences = [
   {
@@ -75,14 +74,10 @@ export function Experience() {
           >
             <div className="flex flex-col md:flex-row md:items-start gap-6">
               <div className="flex-shrink-0">
-                <div className="h-12 w-12 rounded-lg bg-secondary/50 border border-border/50 overflow-hidden flex items-center justify-center">
-                  <Image
-                    src={exp.logo || "/placeholder.svg"}
-                    alt={exp.company}
-                    width={48}
-                    height={48}
-                    className="object-contain"
-                  />
+                <div className="h-12 w-12 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center">
+                  <span className="text-primary font-bold text-lg">
+                    {exp.company.charAt(0)}
+                  </span>
                 </div>
               </div>
 

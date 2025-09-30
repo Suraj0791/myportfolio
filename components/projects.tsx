@@ -4,15 +4,15 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 import { TechBadge } from "./tech-badge";
+import Link from "next/link";
 
 const projects = [
   {
     title: "BookWise - University Library Management",
     description:
       "Modern, full-stack library management system with smart authentication, real-time operations, and intelligent automation. Features multi-role system, mobile-first design, and comprehensive admin dashboard.",
-    image: "/placeholder.svg?height=400&width=600",
+    image: "/bookwise-library-management.png",
     technologies: [
       "Next.js",
       "TypeScript",
@@ -31,7 +31,7 @@ const projects = [
     title: "WordNest - Language Learning Platform",
     description:
       "Interactive Duolingo-inspired language learning app with gamification, AI voice integration, premium features, and comprehensive progress tracking. Includes hearts system, leaderboards, and quests.",
-    image: "/placeholder.svg?height=400&width=600",
+    image: "/wordnest-language-learning.png",
     technologies: [
       "Next.js",
       "React",
@@ -51,7 +51,7 @@ const projects = [
     title: "AI Finance Management App",
     description:
       "Comprehensive financial management platform with AI receipt scanning, Splitwise clone features, automated budgeting, and database health monitoring for Supabase free tier.",
-    image: "/placeholder.svg?height=400&width=600",
+    image: "/ai-finance-management.png",
     technologies: [
       "Next.js",
       "React",
@@ -71,7 +71,7 @@ const projects = [
     title: "Yoom - Video Calling Platform",
     description:
       "Modern video calling application with screen sharing, meeting scheduling, personal rooms, call analytics, chat integration, and meeting recording capabilities.",
-    image: "/placeholder.svg?height=400&width=600",
+    image: "/yoom-video-calling.png",
     technologies: [
       "Next.js",
       "TypeScript",
@@ -89,7 +89,7 @@ const projects = [
     title: "Workify - Project Management Platform",
     description:
       "Jira-inspired project management application with organization management, sprint planning, drag-and-drop issue tracking, and comprehensive project analytics.",
-    image: "/placeholder.svg?height=400&width=600",
+    image: "/workify-project-management.png",
     technologies: [
       "Next.js",
       "React",
@@ -183,7 +183,7 @@ export function Projects({ showAll = false, limit = 4 }: ProjectsProps) {
 
               <div className="flex flex-wrap gap-2">
                 {project.technologies.map((tech) => (
-                  <TechBadge key={tech} name={tech} variant="icon-only" />
+                  <TechBadge key={tech} name={tech} />
                 ))}
               </div>
 

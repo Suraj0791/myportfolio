@@ -3,15 +3,7 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import {
-  Mail,
-  Phone,
-  MapPin,
-  Github,
-  Linkedin,
-  Twitter,
-  Send,
-} from "lucide-react";
+import { Mail, MapPin, Github, Linkedin, Twitter, Send } from "lucide-react";
 
 const contactInfo = [
   {
@@ -19,12 +11,6 @@ const contactInfo = [
     label: "Email",
     value: "surajstudent9122@gmail.com",
     href: "mailto:surajstudent9122@gmail.com",
-  },
-  {
-    icon: Phone,
-    label: "Phone",
-    value: "+91 7488612472",
-    href: "tel:+917488612472",
   },
   {
     icon: MapPin,

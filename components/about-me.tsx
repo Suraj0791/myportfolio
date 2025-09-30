@@ -19,7 +19,7 @@ export function AboutMe() {
           <div className="flex-shrink-0">
             <div className="relative h-48 w-48 rounded-2xl overflow-hidden border-4 border-primary">
               <Image
-                src="/developer-portrait.png"
+                src="/placeholder.svg?height=192&width=192"
                 alt="Suraj Sharma"
                 width={192}
                 height={192}
