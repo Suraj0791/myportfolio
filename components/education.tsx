@@ -107,7 +107,7 @@ export function Education() {
 
                   <div className="flex flex-wrap gap-2">
                     {edu.technologies.map((tech) => (
-                      <TechBadge key={tech} name={tech} variant="icon-only" />
+                      <TechBadge key={tech} name={tech} />
                     ))}
                   </div>
                 </div>
