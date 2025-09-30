@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Github, Linkedin, Mail, Twitter } from "lucide-react";
 import Image from "next/image";
+import { TechBadge } from "./tech-badge";
 
 const techStack = [
   "React js",
@@ -92,13 +93,7 @@ export function Hero() {
 
         <div className="mt-16 flex flex-wrap items-center justify-center gap-2 animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-600">
           {techStack.map((tech) => (
-            <Badge
-              key={tech}
-              variant="secondary"
-              className="px-3 py-1.5 text-sm"
-            >
-              {tech}
-            </Badge>
+            <TechBadge key={tech} name={tech} variant="icon-only" />
           ))}
         </div>
       </div>

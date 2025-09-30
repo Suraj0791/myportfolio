@@ -138,7 +138,7 @@ export function Experience() {
                   <p className="text-sm font-medium">Technologies</p>
                   <div className="flex flex-wrap gap-2">
                     {exp.technologies.map((tech) => (
-                      <TechBadge key={tech} name={tech} />
+                      <TechBadge key={tech} name={tech} variant="icon-only" />
                     ))}
                   </div>
                 </div>

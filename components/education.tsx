@@ -3,6 +3,7 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, GraduationCap, Award } from "lucide-react";
+import { TechBadge } from "./tech-badge";
 
 const education = [
   {
@@ -106,13 +107,7 @@ export function Education() {
 
                   <div className="flex flex-wrap gap-2">
                     {edu.technologies.map((tech) => (
-                      <Badge
-                        key={tech}
-                        variant="secondary"
-                        className="px-2 py-1 text-xs"
-                      >
-                        {tech}
-                      </Badge>
+                      <TechBadge key={tech} name={tech} variant="icon-only" />
                     ))}
                   </div>
                 </div>
