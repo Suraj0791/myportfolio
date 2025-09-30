@@ -1,48 +1,49 @@
 "use client"
 
 import { Card } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { ExternalLink, Github, Star } from "lucide-react"
+import { ExternalLink, Github } from "lucide-react"
 import Image from "next/image"
+import { TechBadge } from "./tech-badge"
 
 const projects = [
   {
-    title: "NoteBuddy",
+    title: "NotesBuddy",
     description:
-      "A comprehensive diary platform with clean, fullscreen, Vercel, AI chatbot, Markdown support, and more.",
-    image: "/note-taking-app-interface.png",
-    technologies: ["Next.js", "TypeScript", "Tailwind", "Prisma", "PostgreSQL", "Vercel"],
+      "A comprehensive study platform with notes, flashcards, quizzes, AI chatbot, and interactive learning tools",
+    image: "/study-platform-with-notes-and-flashcards.jpg",
+    technologies: ["Next.js", "TypeScript", "React", "Vercel", "Tailwind CSS", "PostgreSQL"],
     github: true,
     live: true,
-    stars: 45,
+    status: "All Systems Operational",
   },
   {
-    title: "Apparate MCF Server",
-    description: "Model Context Protocol server for seamless Apparate integration, supporting MCP servers.",
-    image: "/server-dashboard-interface.png",
-    technologies: ["Node.js", "Express", "TypeScript", "Docker"],
+    title: "Appwrite MCP Server",
+    description:
+      "Model Context Protocol server for seamless Appwrite database operations with 7 powerful tools and 99.9% success rate",
+    image: "/server-dashboard-with-database-operations.jpg",
+    technologies: ["TypeScript", "Node.js", "Vercel", "Appwrite"],
     github: true,
     live: true,
-    stars: 32,
+    status: "All Systems Operational",
   },
   {
-    title: "Spotify",
-    description: "Spotify clone, streaming platform with personalized playlists, live chat, and social features.",
+    title: "Spotify Clone",
+    description: "Full-featured music streaming platform with personalized playlists, live chat, and social features",
     image: "/music-streaming-app.png",
-    technologies: ["React", "Node.js", "MongoDB", "Socket.io", "Tailwind", "Express"],
+    technologies: ["React", "Node.js", "MongoDB", "Express", "Tailwind CSS"],
     github: true,
     live: true,
-    stars: 28,
+    status: null,
   },
   {
-    title: "Passphida Aayrl",
-    description: "Instagram dating platform featuring screenshot, creation and authentic user engagement.",
-    image: "/dating-app-interface.png",
-    technologies: ["Next.js", "React", "Tailwind", "Firebase", "Vercel"],
+    title: "Dating Platform",
+    description: "Modern dating platform featuring profile creation, matching algorithm, and authentic user engagement",
+    image: "/dating-app-profiles.png",
+    technologies: ["Next.js", "React", "Firebase", "Tailwind CSS"],
     github: false,
     live: true,
-    stars: 0,
+    status: "Building in Progress",
   },
 ]
 
@@ -75,14 +76,14 @@ export function Projects() {
               <div className="flex items-start justify-between gap-4">
                 <h3 className="text-xl font-semibold">{project.title}</h3>
                 <div className="flex items-center gap-2">
-                  {project.github && (
-                    <Button variant="ghost" size="icon" className="h-8 w-8">
-                      <Github className="h-4 w-4" />
-                    </Button>
-                  )}
                   {project.live && (
                     <Button variant="ghost" size="icon" className="h-8 w-8">
                       <ExternalLink className="h-4 w-4" />
+                    </Button>
+                  )}
+                  {project.github && (
+                    <Button variant="ghost" size="icon" className="h-8 w-8">
+                      <Github className="h-4 w-4" />
                     </Button>
                   )}
                 </div>
@@ -92,19 +93,19 @@ export function Projects() {
 
               <div className="flex flex-wrap gap-2">
                 {project.technologies.map((tech) => (
-                  <Badge key={tech} variant="secondary" className="px-2 py-1 text-xs">
-                    {tech}
-                  </Badge>
+                  <TechBadge key={tech} name={tech} variant="icon-only" />
                 ))}
               </div>
 
-              {project.github && project.stars > 0 && (
-                <div className="flex items-center gap-4 pt-2 border-t border-border">
-                  <div className="flex items-center gap-1 text-sm text-muted-foreground">
-                    <Star className="h-4 w-4 fill-primary text-primary" />
-                    <span>{project.stars} Stars</span>
-                  </div>
-                  <Button variant="link" className="h-auto p-0 text-sm">
+              {project.status && (
+                <div className="flex items-center gap-2 pt-2 border-t border-border">
+                  <span
+                    className={`h-2 w-2 rounded-full ${
+                      project.status === "All Systems Operational" ? "bg-green-500" : "bg-red-500 animate-pulse"
+                    }`}
+                  />
+                  <span className="text-xs text-muted-foreground">{project.status}</span>
+                  <Button variant="link" className="h-auto p-0 text-xs ml-auto">
                     View Details →
                   </Button>
                 </div>
