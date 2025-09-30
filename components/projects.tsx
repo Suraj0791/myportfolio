@@ -4,6 +4,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { TechBadge } from "./tech-badge";
 
 const projects = [
@@ -105,7 +106,14 @@ const projects = [
   },
 ];
 
-export function Projects() {
+interface ProjectsProps {
+  showAll?: boolean;
+  limit?: number;
+}
+
+export function Projects({ showAll = false, limit = 4 }: ProjectsProps) {
+  const displayedProjects = showAll ? projects : projects.slice(0, limit);
+
   return (
     <section id="projects" className="py-20">
       <div className="space-y-4 mb-12 animate-in fade-in slide-in-from-bottom-4 duration-1000">
@@ -113,7 +121,7 @@ export function Projects() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {projects.map((project, index) => (
+        {displayedProjects.map((project, index) => (
           <Card
             key={index}
             className="group overflow-hidden bg-card border-border hover:border-primary/50 transition-all duration-300 animate-in fade-in slide-in-from-bottom-4"
@@ -201,11 +209,17 @@ export function Projects() {
         ))}
       </div>
 
-      <div className="mt-8 text-center">
-        <Button variant="outline" className="rounded-full bg-transparent">
-          Show all projects
-        </Button>
-      </div>
+      {!showAll && (
+        <div className="mt-8 text-center">
+          <Button
+            variant="outline"
+            className="rounded-full bg-transparent"
+            asChild
+          >
+            <Link href="/projects">Show all projects</Link>
+          </Button>
+        </div>
+      )}
     </section>
   );
 }

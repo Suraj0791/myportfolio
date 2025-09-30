@@ -6,49 +6,39 @@ import { Calendar, GraduationCap, Award } from "lucide-react";
 
 const education = [
   {
-    institution: "University of Technology",
-    degree: "Bachelor of Computer Science",
-    period: "2020 - 2024",
-    location: "New Delhi, India",
+    institution: "Indian Institute of Information Technology Ranchi",
+    degree: "Bachelor of Technology in Electronics Engineering",
+    period: "2023 - 2027",
+    location: "Ranchi, Jharkhand, India",
     description:
-      "Focused on Full Stack Web Development, Data Structures, and Software Engineering principles.",
+      "Pursuing B.Tech in Electronics Engineering with focus on modern technologies and software development.",
     achievements: [
-      "Dean's List",
-      "Top 10% of Class",
-      "Web Development Club President",
+      "CGPA: 8.7/10",
+      "College Hackathon Winner",
+      "9 SGPA in 4th Semester",
     ],
-    technologies: ["JavaScript", "React", "Node.js", "PostgreSQL", "Python"],
+    technologies: [
+      "JavaScript",
+      "React",
+      "Next.js",
+      "TypeScript",
+      "PostgreSQL",
+      "Python",
+    ],
   },
   {
-    institution: "Tech Academy",
-    degree: "Full Stack Web Development Bootcamp",
-    period: "2023 - 2024",
-    location: "Online",
+    institution: "Holy Cross School Hazaribagh",
+    degree: "Higher Secondary Education (12th)",
+    period: "2021 - 2023",
+    location: "Hazaribagh, Jharkhand, India",
     description:
-      "Intensive program covering modern web development technologies and industry best practices.",
-    achievements: ["Outstanding Performance", "Final Project Excellence Award"],
-    technologies: ["TypeScript", "Next.js", "React", "PostgreSQL", "AWS"],
-  },
-];
-
-const certifications = [
-  {
-    name: "AWS Certified Developer",
-    issuer: "Amazon Web Services",
-    date: "2024",
-    badge: "aws",
-  },
-  {
-    name: "React Developer Certification",
-    issuer: "Meta",
-    date: "2023",
-    badge: "react",
-  },
-  {
-    name: "Full Stack Web Development",
-    issuer: "FreeCodeCamp",
-    date: "2023",
-    badge: "fcc",
+      "Completed higher secondary education with exceptional academic performance and competitive exam preparation.",
+    achievements: [
+      "95% in 12th Grade - School Topper",
+      "96% in 10th Grade - School Topper",
+      "JEE Mains: 97 Percentile",
+    ],
+    technologies: ["Mathematics", "Physics", "Chemistry", "Computer Science"],
   },
 ];
 
@@ -124,43 +114,6 @@ export function Education() {
                         {tech}
                       </Badge>
                     ))}
-                  </div>
-                </div>
-              </Card>
-            ))}
-          </div>
-        </div>
-
-        {/* Certifications */}
-        <div className="space-y-6">
-          <h3 className="text-xl font-semibold flex items-center gap-2">
-            <Award className="h-5 w-5 text-primary" />
-            Certifications
-          </h3>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {certifications.map((cert, index) => (
-              <Card
-                key={index}
-                className="group overflow-hidden bg-card border-border hover:border-primary/50 transition-all duration-300 cursor-pointer animate-in fade-in slide-in-from-bottom-4"
-                style={{
-                  animationDelay: `${(index + education.length) * 100}ms`,
-                }}
-              >
-                <div className="p-4 space-y-3 text-center">
-                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mx-auto">
-                    <Award className="h-6 w-6 text-primary" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold group-hover:text-primary transition-colors">
-                      {cert.name}
-                    </h4>
-                    <p className="text-sm text-muted-foreground">
-                      {cert.issuer}
-                    </p>
-                    <p className="text-xs text-muted-foreground mt-1">
-                      {cert.date}
-                    </p>
                   </div>
                 </div>
               </Card>

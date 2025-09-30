@@ -17,19 +17,19 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "suraj.sharma@example.com",
-    href: "mailto:suraj.sharma@example.com",
+    value: "surajstudent9122@gmail.com",
+    href: "mailto:surajstudent9122@gmail.com",
   },
   {
     icon: Phone,
     label: "Phone",
-    value: "+91 98765 43210",
-    href: "tel:+919876543210",
+    value: "+91 7488612472",
+    href: "tel:+917488612472",
   },
   {
     icon: MapPin,
     label: "Location",
-    value: "New Delhi, India",
+    value: "Ranchi, Jharkhand, India",
     href: null,
   },
 ];
@@ -38,20 +38,20 @@ const socialLinks = [
   {
     icon: Github,
     label: "GitHub",
-    href: "https://github.com/surajsharma",
-    username: "@surajsharma",
+    href: "https://github.com/Suraj0791/",
+    username: "@Suraj0791",
   },
   {
     icon: Linkedin,
     label: "LinkedIn",
-    href: "https://linkedin.com/in/surajsharma",
+    href: "https://www.linkedin.com/in/suraj-sharma4011",
     username: "Suraj Sharma",
   },
   {
     icon: Twitter,
     label: "Twitter",
-    href: "https://twitter.com/surajsharma",
-    username: "@surajsharma",
+    href: "https://x.com/surajsharm13774?s=21",
+    username: "@surajsharm13774",
   },
 ];
 

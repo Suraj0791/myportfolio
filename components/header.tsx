@@ -1,12 +1,14 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Sun } from "lucide-react";
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,25 +34,25 @@ export function Header() {
 
           <nav className="hidden md:flex items-center gap-8">
             <Link
-              href="#work"
+              href={pathname === "/" ? "#work" : "/#work"}
               className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
               Work
             </Link>
             <Link
-              href="#education"
+              href={pathname === "/" ? "#education" : "/#education"}
               className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
               Education
             </Link>
             <Link
-              href="#projects"
+              href="/projects"
               className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
               Projects
             </Link>
             <Link
-              href="#contact"
+              href={pathname === "/" ? "#contact" : "/#contact"}
               className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
               Contact
