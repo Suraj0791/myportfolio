@@ -1,10 +1,11 @@
-import { Header } from "@/components/header"
-import { Hero } from "@/components/hero"
-import { Experience } from "@/components/experience"
-import { Projects } from "@/components/projects"
-import { AboutMe } from "@/components/about-me"
-import { Blogs } from "@/components/blogs"
-import { Footer } from "@/components/footer"
+import { Header } from "@/components/header";
+import { Hero } from "@/components/hero";
+import { Experience } from "@/components/experience";
+import { Projects } from "@/components/projects";
+import { AboutMe } from "@/components/about-me";
+import { Education } from "@/components/education";
+import { Contact } from "@/components/contact";
+import { Footer } from "@/components/footer";
 
 export default function Home() {
   return (
@@ -15,9 +16,10 @@ export default function Home() {
         <Experience />
         <Projects />
         <AboutMe />
-        <Blogs />
+        <Education />
+        <Contact />
       </div>
       <Footer />
     </main>
-  )
+  );
 }

@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { Github, Linkedin, Mail, Twitter } from "lucide-react"
-import Image from "next/image"
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Github, Linkedin, Mail, Twitter } from "lucide-react";
+import Image from "next/image";
 
 const techStack = [
   "React js",
@@ -22,7 +22,7 @@ const techStack = [
   "Prisma",
   "Drizzle",
   "Postgres",
-]
+];
 
 export function Hero() {
   return (
@@ -46,14 +46,18 @@ export function Hero() {
           </div>
 
           <h1 className="text-4xl md:text-6xl font-bold text-balance">
-            Hello, I'm <span className="text-primary">Ramkrishna Swarnkar</span> 👋🏻
+            Hello, I'm <span className="text-primary">Suraj Sharma</span> 👋🏻
           </h1>
 
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">Available for new projects</p>
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+            Available for new projects
+          </p>
 
           <p className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            I'm a Full Stack web developer and Open Source Contributor, with a focus on JavaScript, React, and UI/UX
-            design. Enthusiastic about Three.js, driven by a keen eye for design.
+            Full Stack Web Developer passionate about creating innovative web
+            solutions and enhancing user experiences. I build interactive web
+            applications using TypeScript, React, Next.js, and PostgreSQL,
+            driven by a keen eye for design and modern web technologies.
           </p>
         </div>
 
@@ -62,7 +66,11 @@ export function Hero() {
             <Mail className="mr-2 h-4 w-4" />
             Get in touch
           </Button>
-          <Button size="lg" variant="outline" className="rounded-full bg-transparent">
+          <Button
+            size="lg"
+            variant="outline"
+            className="rounded-full bg-transparent"
+          >
             Resume CV
           </Button>
         </div>
@@ -84,12 +92,16 @@ export function Hero() {
 
         <div className="mt-16 flex flex-wrap items-center justify-center gap-2 animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-600">
           {techStack.map((tech) => (
-            <Badge key={tech} variant="secondary" className="px-3 py-1.5 text-sm">
+            <Badge
+              key={tech}
+              variant="secondary"
+              className="px-3 py-1.5 text-sm"
+            >
               {tech}
             </Badge>
           ))}
         </div>
       </div>
     </section>
-  )
+  );
 }

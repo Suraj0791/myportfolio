@@ -1,25 +1,27 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Sun } from "lucide-react"
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Sun } from "lucide-react";
 
 export function Header() {
-  const [scrolled, setScrolled] = useState(false)
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20)
-    }
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <header
       className={`sticky top-0 z-50 w-full transition-all duration-300 ${
-        scrolled ? "bg-background/80 backdrop-blur-lg border-b border-border" : "bg-transparent"
+        scrolled
+          ? "bg-background/80 backdrop-blur-lg border-b border-border"
+          : "bg-transparent"
       }`}
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
@@ -36,16 +38,22 @@ export function Header() {
               Work
             </Link>
             <Link
-              href="#blogs"
+              href="#education"
               className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
-              Blogs
+              Education
             </Link>
             <Link
               href="#projects"
               className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
               Projects
+            </Link>
+            <Link
+              href="#contact"
+              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Contact
             </Link>
           </nav>
 
@@ -55,5 +63,5 @@ export function Header() {
         </div>
       </div>
     </header>
-  )
+  );
 }
